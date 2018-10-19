@@ -1,0 +1,7 @@
+
+programm personen.dat stand.dat
+
+Finde alle Mittelkinder, das sind jene, die sowohl ältere als auch
+jüngere Geschwister haben, und gib diese nach Geburtsjahr, Nachname
+und Vorname geordnet aus.
+
