@@ -1,13 +1,13 @@
 CFLAGS=-MMD -MP -Wall
 
-PROGRAMS=albumlister
-OBJECTS=album.o track.o
+PROGRAMS=programm
+OBJECTS=personen.o
 
 ALLOBJECTS=$(OBJECTS) $(patsubst %,%.o,$(PROGRAMS))
 
 default: $(PROGRAMS)
 
-albumlister: $(OBJECTS)
+programm: $(OBJECTS)
 
 clean:
 	-rm -f $(ALLOBJECTS) $(ALLOBJECTS:%.o=%.d) $(PROGRAMS)
