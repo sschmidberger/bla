@@ -1,15 +1,7 @@
-CFLAGS=-MMD -MP -Wall
+default: programm 
 
-PROGRAMS=programm
-OBJECTS=personen.o
-
-ALLOBJECTS=$(OBJECTS) $(patsubst %,%.o,$(PROGRAMS))
-
-default: $(PROGRAMS)
-
-programm: $(OBJECTS)
-
-clean:
-	-rm -f $(ALLOBJECTS) $(ALLOBJECTS:%.o=%.d) $(PROGRAMS)
-
--include $(ALLOBJECTS:%.o=%.d)
+programm: programm.c personen.c
+	gcc -o programm programm.c personen.c
+	
+clean: 
+	-rm -f *.o programm
